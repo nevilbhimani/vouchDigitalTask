@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     display: "flex",
     height: "40vh",
+    [theme.breakpoints.down("sm")]: {
+      width: "75%!important",
+      height: "433px",
+    },
     width: "65%!important",
   },
   loginbttn: {
@@ -32,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   header: {
-    fontSize: "40px!important",
+    fontSize: "35px!important",
     fontWeight: "1000!important",
   },
   lighttext: {
@@ -162,7 +166,7 @@ const LoginForm = () => {
           <Grid item xs={8} className={classes.rpass}>
             <FormControlLabel
               control={<Checkbox defaultChecked />}
-              label="Remember password?"
+              label="Remember password"
             />
           </Grid>
           <Grid item xs={4} className={classes.fpass}>

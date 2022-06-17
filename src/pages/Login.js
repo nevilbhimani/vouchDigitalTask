@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "90.5vh",
+    [theme.breakpoints.down("sm")]: {
+      height: "650px",
+    },
   },
   logindiv: {
     display: "flex",
@@ -24,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "90.5vh",
     // margin: "auto",
     display: "block",
+    [theme.breakpoints.down("sm")]: {
+      display: "none!important",
+    },
   },
 }));
 export const Login = () => {
@@ -32,10 +38,10 @@ export const Login = () => {
     <div>
       <NavBar />
       <Grid container className={classes.container}>
-        <Grid item xs={5} className={classes.logindiv}>
+        <Grid item sm={5} xs={12} className={classes.logindiv}>
           <LoginForm />
         </Grid>
-        <Grid item xs={7}>
+        <Grid item sm={7} xs={0}>
           <img src={login2} className={classes.image} />
         </Grid>
       </Grid>

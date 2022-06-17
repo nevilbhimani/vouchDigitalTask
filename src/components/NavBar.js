@@ -12,7 +12,9 @@ const useStyles = makeStyles((theme) => ({
   },
   col1: {
     display: "flex",
-
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "10%!important",
+    },
     paddingLeft: "5%!important",
     justifyContent: "flex-start",
   },
@@ -28,10 +30,16 @@ const useStyles = makeStyles((theme) => ({
   },
   bttn1: {
     //marginLeft: "40px!important",
+    [theme.breakpoints.down("sm")]: {
+      display: "none!important",
+    },
     width: "100%",
     fontWeight: "700!important",
   },
   bttn2: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none!important",
+    },
     width: "100%",
     backgroundColor: "#fb8500!important",
     fontWeight: "700!important",
@@ -41,17 +49,17 @@ const NavBar = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid container spacing={3} className={classes.row}>
-        <Grid item xs={8} className={classes.col1}>
+      <Grid container spacing={{ sm: 3, xs: 0 }} className={classes.row}>
+        <Grid item xs={12} sm={8} className={classes.col1}>
           <Typography className={classes.atools}>ATools</Typography>
           <Typography className={classes.dot}>.</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={0} sm={2}>
           <Button variant="contained" className={classes.bttn1}>
             Start free trial
           </Button>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={0} sm={2}>
           <Button variant="contained" className={classes.bttn2}>
             Login
           </Button>
