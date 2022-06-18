@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     height: "40vh",
     [theme.breakpoints.down("sm")]: {
       width: "75%!important",
-      height: "433px",
+      height: "350px",
     },
     width: "65%!important",
   },
@@ -49,11 +49,19 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
     display: "flex",
+    color: "#84888e!important",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12px!important",
+    },
   },
   rpass: {
     justifyContent: "flex-start",
     alignItems: "center",
     display: "flex",
+    color: "#84888e!important",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "8px!important",
+    },
   },
 }));
 const LoginForm = () => {
@@ -112,7 +120,7 @@ const LoginForm = () => {
           {/* </Grid>
         <Grid item xs={12}> */}
           <Typography className={classes.lighttext}>
-            sub-title text goes here
+            Sub-title text goes here
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -137,7 +145,7 @@ const LoginForm = () => {
           <TextField
             variant="outlined"
             className="smallfield"
-            label="password"
+            label="Password"
             id="password"
             helperText={
               formik.touched.password && formik.errors.password
@@ -166,11 +174,11 @@ const LoginForm = () => {
           <Grid item xs={8} className={classes.rpass}>
             <FormControlLabel
               control={<Checkbox defaultChecked />}
-              label="Remember password"
+              label="Remember Password"
             />
           </Grid>
           <Grid item xs={4} className={classes.fpass}>
-            Forgot password?
+            Forgot Password?
           </Grid>
         </Grid>
       </Grid>

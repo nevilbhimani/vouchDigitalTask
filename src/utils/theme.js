@@ -9,10 +9,7 @@ export const theme = createTheme({
 
   typography: {
     fontFamily: "Poppins",
-    h2: {
-      fontWeight: "700",
-      fontSize: "39px",
-    },
+
     h3: {
       fontWeight: "700",
       fontSize: "30px!important",
@@ -20,12 +17,16 @@ export const theme = createTheme({
         fontSize: "25px!important",
       },
     },
-    h6: {
-      fontWeight: "500",
-      fontSize: "10px",
-    },
-    textField: {
-      height: "50px!important",
+  },
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          "@media (max-width:600px)": {
+            fontSize: "12px",
+          },
+        },
+      },
     },
   },
 });
