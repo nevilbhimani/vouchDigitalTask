@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     height: "40vh",
     [theme.breakpoints.down("sm")]: {
-      width: "75%!important",
+      width: "80%!important",
       height: "350px",
     },
     width: "65%!important",
@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#84888e!important",
     [theme.breakpoints.down("sm")]: {
       fontSize: "12px!important",
+      justifyContent: "flex-end",
     },
   },
   rpass: {
@@ -171,13 +172,13 @@ const LoginForm = () => {
           </Button>
         </Grid>
         <Grid item xs={12} className={classes.lastRow}>
-          <Grid item xs={8} className={classes.rpass}>
+          <Grid item xs={7.7} className={classes.rpass}>
             <FormControlLabel
               control={<Checkbox defaultChecked />}
               label="Remember Password"
             />
           </Grid>
-          <Grid item xs={4} className={classes.fpass}>
+          <Grid item xs={4.3} className={classes.fpass}>
             Forgot Password?
           </Grid>
         </Grid>
